@@ -98,8 +98,8 @@ var GitHubActivity = (function() {
       // Get the comment if one exists, and trim it to 150 characters.
       if (p.comment && p.comment.body) {
         data.comment = p.comment.body;
-        if (data.comment.length > 150) {
-          data.comment = data.comment.substring(0, 150) + '...';
+        if (data.comment.length > 120) {
+          data.comment = data.comment.substring(0, 120) + '...';
         }
         if (p.comment.html_url && p.comment.commit_id) {
           var title = data.repo.name + '@' + p.comment.commit_id.substring(0, 10);
